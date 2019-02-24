@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User Management From</title>
+</head>
+<body>
+    <div th:replace="header::header">...</div>
+
+    <h1 style="color: firebrick">Add a User</h1>
+
+    <form action="/users" th:action="@{/users}" method="post" th:object="${userModel.user}">
+        <input type="hidden" name = "id" style="display: inline" th:value="*{id}"></input>
+        Name :
+        <input type="text" name = "name" th:value="*{name}"></input>
+        Email:
+        <input type="text" name="email" th:value="*{email}"></input>
+        <br></br>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <input type="submit" value="Submit" style="margin-left: 8em;"></input>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+    </form>
+
+    <div th:replace="footer::footer">...</div>
+</body>
+</html>

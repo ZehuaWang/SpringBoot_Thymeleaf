@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User Management View</title>
+</head>
+<body>
+
+    <div th:replace="header::header">...</div>
+    <h1 style="color: darkgoldenrod">Find User By ID</h1>
+
+        <div>
+
+            <p><strong>ID:</strong><span th:text="${userModel.user.id}">id</span></p>
+            <p><strong>Name:</strong><span th:text="${userModel.user.name}">name</span></p>
+            <p><strong>Email:</strong><span th:text="${userModel.user.id}">email</span></p>
+
+        </div>
+
+        <!--Modify User -->
+        <div>
+            <a th:href="@{'/users/delete/' + ${userModel.user.id}}">Delete This User</a>
+        </div>
+
+        <!--Delete User -->
+        <div>
+            <a th:href="@{'/users/modify/' + ${userModel.user.id}}">Modify this User</a>
+        </div>
+    <div th:replace="footer::footer">...</div>
+
+</body>
+</html>

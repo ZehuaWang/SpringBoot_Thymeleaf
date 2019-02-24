@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User Management Header</title>
+</head>
+<body>
+    <div th:fragment="header">
+
+        <h1 style="color: darkcyan">Thymeleaf User Management</h1>
+
+        This is the Header
+
+        <a href="/users" th:href="@{~/users}">Home Page</a>
+
+    </div>
+</body>
+</html>
